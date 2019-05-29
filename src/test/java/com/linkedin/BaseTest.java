@@ -8,17 +8,19 @@ public class BaseTest {
     protected WebDriver driver;
     protected WelcomePage welcomePage;
     protected User user;
+    protected SecurityCheckPage securityCheckPage;
 
     @Before
     public void setDriver() {
         System.setProperty("webdriver.chrome.driver",
                 "C:/Users/Otunyk/IdeaProjects/chromedriver.exe");
 
-       driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://www.linkedin.com/");
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         welcomePage = new WelcomePage(driver);
         user = new User();
+        securityCheckPage = new SecurityCheckPage(driver);
 
 
 

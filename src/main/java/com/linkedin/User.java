@@ -6,7 +6,7 @@ public class User {
 
     public User(){
         email = " email@gmail.com";
-        password ="1234ABC";
+        password ="1234ABC!";
     }
     public String getEmail() {
         return email;
